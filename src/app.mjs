@@ -5,9 +5,15 @@ solicitudes relacionadas con superhéroes.
 
  */
 
+const dns = require("dns/promises");
+//Forzar servidores DNS: Google y Cloudflare
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
+
 import express from 'express';
 import { connectDB } from './config/dbConfig.mjs';
 import superHeroRoutes from './routes/superHeroRoutes.mjs';
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;

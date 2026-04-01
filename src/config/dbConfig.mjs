@@ -1,9 +1,7 @@
 //Configuracion de la base de Datos
-import mongoose from 'mongoose';
 
-const dns = require("dns/promises");
-//Forzar servidores DNS: Google y Cloudflare
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
+import mongoose from 'mongoose';
 
 export async function connectDB() {
     try {
