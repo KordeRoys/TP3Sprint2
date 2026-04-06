@@ -5,9 +5,11 @@ solicitudes relacionadas con superhéroes.
 
  */
 
-const dns = require("dns/promises");
-//Forzar servidores DNS: Google y Cloudflare
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+//const dns = require("dns/promises");
+//Forzar servidores DNS: Google y Cloudflare //Aqui no va, va en la carpera config
+//dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
+
 
 
 import express from 'express';

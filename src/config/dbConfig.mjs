@@ -1,11 +1,15 @@
 //Configuracion de la base de Datos
 
-
 import mongoose from 'mongoose';
+
+import dns from "dns";
+// Forzar servidores DNS: Google y Cloudflare
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 
 export async function connectDB() {
     try {
-        await mongoose.connect('mongodb+srv://Grupo-23:grupo23@cursadanodejs.1s9ii.mongodb.net/Node-js');
+        await mongoose.connect('mongodb+srv://grupo-23:grupo-23@cluster0.blryo.mongodb.net/NodeMod3Cohorte5');
         console.log('Conexión exitosa a MongoDB ');
     } catch (error) {
         console.error("Error al conectar a MongoDB ", error);
